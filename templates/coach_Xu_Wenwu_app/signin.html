@@ -8,4 +8,18 @@
 
     <h1>Oui enfin !</h1>
 
+    <form action="/connexion/" method="post">
+    {% csrf_token %}
+        <label for="">Nom d'utilisateur</label>
+        <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur" required minlength="3">
+        <br>
+
+        <label for="">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Saisissez votre mot de passe..." required minlength="5">
+        <br>
+
+        <input type="submit" value="Connexion">
+
+    </form>
+
 {% endblock %}
