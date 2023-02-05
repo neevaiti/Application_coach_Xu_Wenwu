@@ -1,0 +1,65 @@
+{% extends "coach_Xu_Wenwu_app/base.html" %}
+
+{% block title %}
+    <title>Inscription - Coach Xu Wenwu</title>
+{% endblock %}
+
+{% block body %}
+
+
+    <nav>
+        <h1>Xu Wenwu</h1>
+
+        <ul>
+            <li><a href="">Accueil</a></li>
+            <li><a href="">À propos</a></li>
+            <li><a href="">Expertise</a></li>
+            <li><a href="">Livres</a></li>
+            <li><button type="submit"><a href="/connexion">Connexion</a></button></li>
+            <li><button type="submit"><a href="/inscription">Inscription</a></button></li>
+            <li><button type="submit">Déconnexion</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Inscription</h1>
+
+            <form action="/inscription/" method="post">
+            {% csrf_token %}
+
+                <label for="">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required minlength="3">
+                <br>
+
+                <label for="">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                <br>
+
+                <label for="">Prénom</label>
+                <input type="text" id="surname" name="surname" placeholder="Votre prénom" required>
+                <br>
+
+                <label for="">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" required minlength="10" maxlength="10">
+                <br>
+
+                <label for="">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="shepard@exemple.com" required>
+                <br>
+
+                <label for="">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Mot de passe..." required minlength="10">
+                <br>
+
+                <label for="">Confirmation mot de passe</label>
+                <input type="password" id="password2" name="password2" placeholder="Confirmer mot de passe..." required minlength="10">
+                <br>
+
+                <input type="submit" value="S'inscrire">
+
+            </form>
+        </section>
+    </main>
+
+{% endblock %}
