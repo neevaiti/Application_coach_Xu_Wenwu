@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 # Premier test de page en code dégueulasse
@@ -38,6 +38,7 @@ def signin(request):
         username = request.POST["username"]
         password = request.POST["password"]
 
+
         user = authenticate(username=username, password=password)
 
         if user is not None:
@@ -47,12 +48,38 @@ def signin(request):
 
         else:
             messages.error(request, "Nom d'utilisateur et/ou Mot de passe incorrect.")
-            return redirect(home)
+            return redirect(signin)
 
     return render(request, "coach_Xu_Wenwu_app/signin.html")
 
 
-def logout(request):
+
+@login_required
+def signout(request):
     logout(request)
     messages.success(request, "Déconnexion réussie.")
     return redirect(home)
+
+
+@login_required
+def dashboard(request):
+    return render(request, "coach_Xu_Wenwu_app/dashboard.html")
+
+
+@login_required
+def take_appointment(request):
+    return render(request, "coach_Xu_Wenwu_app/take_appointment.html")
+
+@login_required
+def appointment(request):
+    if request.method == "POST":
+        your_name = request.POST["your-name"]
+        your_surname = request.POST["your-surname"]
+        your_phone_number = request.POST["your-phone-number"]
+        your_time = request.POST["your-time"]
+        your_message = request.POST["your-message"]
+
+        return render(request, "coach_Xu_Wenwu_app/dashboard.html", {"your_time": your_time})
+
+    else:
+        return render(request, "coach_Xu_Wenwu_app/take_appointment.html", {})

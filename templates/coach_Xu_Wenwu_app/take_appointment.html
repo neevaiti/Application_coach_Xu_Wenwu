@@ -1,0 +1,61 @@
+{% extends "coach_Xu_Wenwu_app/base.html" %}
+
+{% block title %}
+    <title>Tableau de bord - Coach Xu Wenwu</title>
+{% endblock %}
+
+{% block body %}
+
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <h5 id="account-created">Félicitation :</h5> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+
+
+    <nav>
+        <h1>Xu Wenwu</h1>
+
+        <ul>
+            <li><a href="">Prendre Rendez-vous</a></li>
+            <li><a href="">Rendez-vous passés</a></li>
+            <li><a href="/">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <h1>Prendre rendez-vous : </h1>
+
+    <form action="" method="post">
+    {% csrf_token %}
+        <label for="">Nom</label>
+        <input type="text" name="your-name" maxlength="150" placeholder="Votre nom..." required> <br>
+
+        <label for="">Prénom</label>
+        <input type="text" name="your-surname" maxlength="150" placeholder="Votre prénom..." required> <br>
+
+        <label for="">Numéro de téléphone</label>
+        <input type="text" name="your-phone-number" minlength="10" maxlength="10" required> <br>
+
+        <select name="your-time" id="">
+            <!--Appointment during 1hour-->
+            <option value="Choisir l'horaire...">Choisir l'horaire...</option>
+            <option value="9h00 à 10h00">9h00 à 10h00</option>
+            <option value="10h10 à 11h10">10h10 à 11h10</option>
+            <option value="11h20 à 12h30">11h20 à 12h20</option>
+            <option value="13h30 à 14h30">13h30 à 14h30</option>
+            <option value="14h40 à 15h40">14h40 à 15h40</option>
+            <option value="15h50 à 16h50">15h50 à 16h50</option>
+        </select> <br>
+
+        <label for="">Informations pour préparer le Rendez-vous</label>
+        <textarea name="your-message" id="" cols="30" rows="10" placeholder="Écrivez votre message..." required></textarea>
+
+        <input type="submit" value="Confirmer">
+
+    </form>
+
+
+{% endblock %}

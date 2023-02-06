@@ -20,7 +20,9 @@
         <h1>Xu Wenwu</h1>
 
         <ul>
-            <li><button type="submit">Déconnexion</button></li>
+            <li><a href="/rendez-vous/">Prendre Rendez-vous</a></li>
+            <li><a href="">Rendez-vous passés</a></li>
+            <li><a href="/">Déconnexion</a></li>
         </ul>
     </nav>
 
@@ -29,13 +31,10 @@
     {% if user.is_authenticated %}
         <h3>Hello {{ fname }}</h3>
         <h4>Vous êtes connecté.</h4>
+    {% endif %}
 
-        <ul>
-            <li><a href="">Prendre Rendez-vous</a></li>
-            <li><a href="">Rendez-vous passés</a></li>
-        </ul>
-
-        <input type="button" href="/home" value="Déconnexion">
+    {% if your_time %}
+        <p>{{ your_time }}</p>
     {% endif %}
 
 {% endblock %}
