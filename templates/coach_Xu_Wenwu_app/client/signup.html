@@ -1,0 +1,43 @@
+{% extends "coach_Xu_Wenwu_app/client/extends/sign_base.html" %}
+{% load static %}
+{% block title %}
+    Inscription - Coach Xu Wenwu
+{% endblock %}
+
+{% block content %}
+    <h1>Inscription</h1>
+    <form class="form" action="/inscription/" method="post">
+        {% csrf_token %}
+        <label class="label">
+            Nom d'utilisateur
+            <input type="text" class="input" name="username" placeholder="Nom d'utilisateur" required minlength="3">
+        </label>
+
+        <label class="label">
+            Prénom
+            <input type="text" class="input" name="fname" placeholder="Votre nom" required>
+        </label>
+
+        <label class="label">
+            Nom
+            <input type="text" class="input" name="lname" placeholder="Votre prénom" required>
+        </label>
+
+        <label class="label">
+            E-mail
+            <input type="email" class="input" name="email" placeholder="shepard@exemple.com" required>
+        </label>
+
+        <label class="label">
+            Mot de passe
+            <input type="password" class="input" name="password" placeholder="Mot de passe" required minlength="5">
+        </label>
+
+        <label class="label">
+            Confirmation mot de passe
+            <input type="password" class="input" name="confirm-password" placeholder="Confirmer mot de passe" required minlength="5">
+        </label>
+
+        <button class="button submit-btn">Connexion</button>
+    </form>
+{% endblock %}

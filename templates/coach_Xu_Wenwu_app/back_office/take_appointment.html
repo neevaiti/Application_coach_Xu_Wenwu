@@ -1,0 +1,39 @@
+{% extends "coach_Xu_Wenwu_app/base.html" %}
+
+{% block title %}
+    Tableau de bord - Coach Xu Wenwu
+{% endblock %}
+
+{% block body %}
+
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <h5 id="account-created">Notification :</h5> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+
+
+    <nav>
+        <h1>Xu Wenwu</h1>
+
+        <ul>
+            <li><a href="">Prendre Rendez-vous</a></li>
+            <li><a href="">Rendez-vous passés</a></li>
+            <li><a href="/">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <h1>Prendre rendez-vous : </h1>
+
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Book Appointment</button>
+    </form>
+
+
+{% endblock %}
