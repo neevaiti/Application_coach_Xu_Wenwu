@@ -1,0 +1,12 @@
+{% block title %}
+    Modification note - Coach Xu Wenwu
+{% endblock %}
+
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Modifier</button>
+    </form>
+{% endblock %}

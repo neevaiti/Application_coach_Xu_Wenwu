@@ -1,0 +1,26 @@
+.sign-in {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+}
+
+.sign-in__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+    .sign-in::before {
+        content: "";
+        width: 50vw;
+        height: 100vh;
+        background-image: url("https://cdn.pixabay.com/photo/2021/08/29/15/44/woman-6583628_960_720.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

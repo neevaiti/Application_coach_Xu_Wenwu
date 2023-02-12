@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <h1>Xu Wenwu</h1>
+    <ul>
+        <li><a href="/rendez-vous/">Prendre Rendez-vous</a></li>
+        {% if user.is_staff %}
+        <li><a href="/liste-patients/">Rendez-vous passés</a></li>
+        {% else %}
+        <li><a href="/historique-rendez-vous/">Rendez-vous passés</a></li>
+        {% endif %}
+        <li><a href="/signout">Déconnexion</a></li>
+    </ul>
+</nav>

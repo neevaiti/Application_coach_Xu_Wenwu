@@ -1,0 +1,17 @@
+{% block title %}
+    Rendez-vous passés - Coach Xu Wenwu
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Liste des clients</h1>
+<ul>
+{% for patient in patients %}
+    <li><a href="{% url 'patient_appointments' patient.name %}">{{ patient.name }}</a></li>
+{% endfor %}
+</ul>
+
+
+
+{% endblock %}

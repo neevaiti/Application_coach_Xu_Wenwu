@@ -1,0 +1,22 @@
+{% block title %}
+    Rendez-vous passés - Coach Xu Wenwu
+{% endblock %}
+
+
+{% block body %}
+{% for appointment in appointments %}
+  <tr>
+    {% if is_superuser %}
+        {% csrf_token %}
+        <td>{{ appointment.name }}</td>
+        <td>{{ appointment.date }}</td>
+        <td>{{ appointment.time_slot }}</td>
+        <td>{{ appointment.notes }} <a href="/edit_notes/{{ appointment.id }}/">Modifier</a></td>
+    {% else %}
+    <td>{{ appointment.date }}</td>
+    <td>{{ appointment.time_slot }}</td>
+    {% endif %}
+  </tr>
+{% endfor %}
+
+{% endblock %}
