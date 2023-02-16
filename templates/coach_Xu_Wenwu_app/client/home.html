@@ -4,8 +4,42 @@
     Accueil - Coach Xu Wenwu
 {% endblock %}
 
-{% block body %}
-{% include "coach_Xu_Wenwu_app/client/includes/navbar.html" %}
+{% block extra-head %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="{% static 'client/home.css' %}">
+{% endblock %}
 
-<script src="" async defer></script>
+{% block body %}
+
+    <div class="scroll_target_top">
+    {% include "coach_Xu_Wenwu_app/client/includes/navbar.html" %}
+    </div>
+
+    <main>
+        <section class="home__first-view">
+            <div class="home__container">
+                <h1 class="home__title-section">Êtes-vous prêt à changer votre vie ?</h1>
+                <p class="home__text-section">Vous deviendrez une meilleure version de vous même.</p>
+                <a class="scroll_down_button down-button" type="button">↓</a>
+                <a href=""></a>
+            </div>
+        </section>
+
+
+        <section class="home__second-view scroll_target_down">
+            <div class="home__second-view-container">
+                <h1>Mon talent ?</h1>
+                <p>
+                    Vous poussez à devenir une meilleure version de vous même. <br>
+                    Que vous cherchiez à améliorer votre confiance en vous, à mieux gérer votre stress, à trouver votre voie professionnelle ou à améliorer vos relations, je suis là pour vous aider. Nous travaillerons ensemble pour identifier vos objectifs, comprendre les obstacles qui vous empêchent d'avancer et élaborer un plan d'action concret pour les surmonter.
+                </p>
+
+                <a href="/register" class="button">Allons-y</a>
+                <a class="button">Découvrir mon parcours</a>
+            </div>
+        </section>
+    </main>
+
+    {% include "coach_Xu_Wenwu_app/client/includes/footer.html" %}
+    <script src="{% static 'client/extends/scrolling.js' %}"></script>
 {% endblock %}

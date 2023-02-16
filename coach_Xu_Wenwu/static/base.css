@@ -1,6 +1,15 @@
 :root {
     --primary-color: seagreen;
     --secondary-color: indianred;
+    --text-primary-color: white;
+    --text-secondary-color: #FFFBEB;
+    --sign_goback-color: #EB6440;
+    --primary-background-color: #2B3A55;
+    --secondary-background-color: #50577A;
+    --valid-color: green;
+    --error-color: red;
+    --black-color: black;
+    --white-color: white;
 }
 
 * {
@@ -20,7 +29,7 @@ body {
     user-select: none;
     cursor: pointer;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white-color);
     font-size: 1rem;
     text-align: center;
     padding: 3px 9px;
@@ -34,21 +43,23 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2%;
-    background-color: white;
     width: 100%;
+    background-color: var(--primary-background-color);
+    color: var(--white-color);
 }
 
 
 .navbar > h1 > a {
     font-weight: 500;
     text-decoration: none;
-    color: black;
+    color: var(--white-color);
 }
 
 
 .navbar > ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     list-style: none;
 }
 
@@ -59,16 +70,34 @@ body {
 
 
 .navbar > ul > li > a:not(.button) {
-    color: black;
+    color: var(--white-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-bottom ease-in-out 200ms;
 }
 
 
-.navbar > ul > li > a:not(.button):hover {
-    border-bottom: 3px solid seagreen;
-    transition: border-bottom linear 200ms;
+/*.navbar > ul > li > a:not(.button):hover {*/
+/*    border-bottom: ;*/
+/*}*/
+
+
+/*-------------------||Footer-bar||-----------------------*/
+.footer {
+    /*position: fixed;*/
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    width: 100%;
+    background-color: var(--primary-background-color);
+    color: var(--white-color);
+}
+
+
+.footer > .data-rules {
+    font-size: 10px;
+    color: var(--white-color);
 }
 
 
@@ -108,5 +137,5 @@ body {
 .input-error {
     margin-top: 3px;
     font-size: 0.85rem;
-    color: red;
+    color: var(--error-color);
 }

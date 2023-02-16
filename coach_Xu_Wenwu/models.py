@@ -2,6 +2,9 @@ from django.contrib.auth.models import User
 from django.db import models
 
 class PickDate(models.Model):
+    """
+    A table to store all the necessary data
+    """
     id = models.AutoField(primary_key=True)
     date = models.DateField()
     time_slot = models.TimeField()

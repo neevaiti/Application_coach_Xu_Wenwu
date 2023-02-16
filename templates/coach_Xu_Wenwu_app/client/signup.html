@@ -4,9 +4,10 @@
     Inscription - Coach Xu Wenwu
 {% endblock %}
 
+
 {% block content %}
     <h1>Inscription</h1>
-    <form class="form" action="/inscription/" method="post">
+    <form class="form" action="/register/" method="post">
         {% csrf_token %}
         <label class="label">
             Nom d'utilisateur
@@ -25,18 +26,21 @@
 
         <label class="label">
             E-mail
-            <input type="email" class="input" name="email" placeholder="shepard@exemple.com" required>
+            <input type="email" class="input" name="email" placeholder="ex@exemple.com" required>
         </label>
 
         <label class="label">
             Mot de passe
-            <input type="password" class="input" name="password" placeholder="Mot de passe" required minlength="5">
+            <input type="password" class="input" name="password" placeholder="Mot de passe" required minlength="3">
         </label>
 
         <label class="label">
             Confirmation mot de passe
-            <input type="password" class="input" name="confirm-password" placeholder="Confirmer mot de passe" required minlength="5">
+            <input type="password" class="input" name="confirm-password" placeholder="Confirmation mot de passe" required minlength="3">
         </label>
+        <i>
+        Le mot de passe doit contenir : au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un symbole.
+        </i>
 
         <button class="button submit-btn">Connexion</button>
     </form>

@@ -2,6 +2,8 @@
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
+    color: white;
+    background-color: var(--primary-background-color);
 }
 
 .sign__container {
@@ -16,6 +18,8 @@
 
 .sign__go-back-link {
     align-self: start;
+    text-decoration: none;
+    color: var(--sign_goback-color);
 }
 
 @media screen and (min-width: 1024px) {
@@ -23,7 +27,7 @@
         content: "";
         width: 50vw;
         min-height: 100vh;
-        background-image: url("https://cdn.pixabay.com/photo/2021/08/29/15/44/woman-6583628_960_720.jpg");
+        background-image: url("https://cdn.pixabay.com/photo/2020/09/24/03/50/achievement-5597527_1280.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
