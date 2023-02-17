@@ -17,6 +17,17 @@ A small website, allowing a coach to have an appointment system for his future c
 - View all patients in the appointment history
 - Can write a note about an appointment (not visible to the patient)
 
+### Accounts login exemples
+
+- __Coach account :__ 
+  - username : xuwenwu
+  - password : azerty
+
+- __Client account__
+  - username : superman
+  - password : Azerty@12345
+
+    
 
 ## Deployment
 
