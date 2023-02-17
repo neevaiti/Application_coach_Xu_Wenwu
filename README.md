@@ -3,16 +3,13 @@
 
 A small website, allowing a coach to have an appointment system for his future clients. I did this project as part of an AI and data technician training at french [Simplon](https://simplon.co/) school. With the objective of integrating the next big promotion for the continuation of the training.
 
-
-
-
 ## Features
 
 ### Client features
 
 - Registration system (Responsive w/ pure CSS)
 - Connection system (Responsive w/ pure CSS)
-- appointment booking form
+- Appointment booking form
 - View his appointment history
 
 ### Coach features
@@ -38,13 +35,15 @@ If you don't know how to create an environment, these links may help you:
 
 The [requirements.txt](https://github.com/neevaiti/Application_coach_Xu_Wenwu/blob/master/requirements.txt) contains all possible Python packages useful for the project.
 
+You may need [Node-js](https://nodejs.org/en/) to run `npm` commands.
+
 I used a JavaScript library to make a proper notification system.
 Normally I have everything pushed from toastify-js, but it may not work for you. If this is the case, here is the github link of [Toastify-js](https://github.com/apvarun/toastify-js).
 
 
 ### Installation of Toastify-js
 
-Run the below command to add toastify-js to your exisitng or new project.
+Run the below command to add toastify-js to your existing or new project.
 
 ```bash
   npm install --save toastify-js
