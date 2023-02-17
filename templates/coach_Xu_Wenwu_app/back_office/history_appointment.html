@@ -16,7 +16,7 @@
         <td>{{ appointment.name }}</td>
         <td>{{ appointment.date }}</td>
         <td>{{ appointment.time_slot }}</td>
-        <td>{{ appointment.notes }} <a href="/edit_notes/{{ appointment.id }}/">Modifier</a></td>
+        <td>{{ appointment.notes }} <a href="{% url 'edit_notes' appointment.id %}">Modifier</a></td>
     {% else %}
     <td>{{ appointment.date }}</td>
     <td>{{ appointment.time_slot }}</td>
