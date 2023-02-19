@@ -19,11 +19,11 @@ A small website, allowing a coach to have an appointment system for his future c
 
 ### Accounts login exemples
 
-- __Coach account :__ 
+- _Coach account :_ 
   - username : xuwenwu
   - password : azerty
 
-- __Client account__
+- _Client account :_
   - username : superman
   - password : Azerty@12345
 
