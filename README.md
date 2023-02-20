@@ -19,11 +19,11 @@ A small website, allowing a coach to have an appointment system for his future c
 
 ### Accounts login exemples
 
-- __Coach account :__ 
+- _Coach account :_ 
   - username : xuwenwu
   - password : azerty
 
-- __Client account__
+- _Client account :_
   - username : superman
   - password : Azerty@12345
 
@@ -57,7 +57,7 @@ Normally I have everything pushed from toastify-js, but it may not work for you.
 Run the below command to add toastify-js to your existing or new project.
 
 ```bash
-  npm install --save toastify-js
+npm install --save toastify-js
 ```
 
 or 
@@ -73,7 +73,7 @@ yarn add toastify-js -S
 Clone the project
 
 ```bash
-  git clone https://github.com/neevaiti/Application_coach_Xu_Wenwu.git
+git clone https://github.com/neevaiti/Application_coach_Xu_Wenwu.git
 ```
 
 I advice you to use **`SSH`** method.
@@ -85,7 +85,7 @@ git clone git@github.com:neevaiti/Application_coach_Xu_Wenwu.git
 Go to the project directory :
 
 ```bash
-  cd my-project
+cd my-project
 ```
 
 ***⚠️ Don't forget to initialize your environment and to activate it ! Before making these commands :***
@@ -105,7 +105,7 @@ python manage.py migrate
 Start the server
 
 ```bash
-  python manage.py runserver
+python manage.py runserver
 ```
 
 
