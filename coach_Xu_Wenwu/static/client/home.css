@@ -1,12 +1,9 @@
 /*-------------------||First view section||-----------------------*/
 
 .down-button {
-    background-color: var(--secondary-background-color);
-    color: var(--white-color);
-    font-size: 25px;
-    padding: 8px;
+    color: var(--primary-background-color);
+    font-size: 40px;
     border-color: transparent;
-    border-radius: 15px;
     cursor: pointer;
     animation: bounce 2s infinite;
 }
@@ -46,7 +43,7 @@
 
 .home__text-section {
     color: var(--secondary-background-color);
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 
