@@ -119,8 +119,3 @@ python manage.py runserver
 
 - [@neevaiti](https://github.com/neevaiti)
 
-
-## My opinion on this exercise
-I started learning web development, HTML, CSS and JavaScript as a self-taught person. For me, Django is a good way to understand how the web works. Even if the project was done in a "primary" way, without the use of APIs. 
-All this to say that I liked this project, because it is the web. And my goal later is to specialize in [React-js](https://reactjs.org/) and back-end in AI or data integration.
-
